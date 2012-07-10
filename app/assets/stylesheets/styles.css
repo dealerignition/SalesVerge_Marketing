@@ -5,18 +5,24 @@ body {
 .header {
   background: #222 url(../assets/black_linen_v2.png);
   position: relative;
-  z-index: -1;
+  z-index: 0;
   color: #fff;
   padding: 20px;
 }
 
-.logo {
-  margin: 8px 0 28px 0;
+.header .nav {
+  font-size: 16px;
+  margin-top: -14px;
+}
+
+.header .nav a:hover {
+  text-decoration: none;
 }
 
 .screens {
   z-index: 10;
   margin-top: -50px;
+  position: relative;
 }
 
 .center {

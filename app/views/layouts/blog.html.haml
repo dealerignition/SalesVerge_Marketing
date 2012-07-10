@@ -1,0 +1,36 @@
+!!!
+%html
+  %head
+    %title
+      - if @title
+        =@title
+        |
+      SalesVerge
+      
+    /%link{ :rel => "icon", :type => "image/x-icon", :href => "/assets/favicon.ico" }
+    %meta{ :charset => "utf-8" }
+    =stylesheet_link_tag "application", :media => "all"
+    =javascript_include_tag "application"
+    =csrf_meta_tags
+
+  %body.blog
+    .header
+      .container
+        = link_to image_tag('salesverge.png', :height => 40, :class => "logo"), "/"
+        %span.nav
+          = link_to "What is SalesVerge?", "/"
+          |
+          = link_to "Blog", "/blog"
+    .container
+      .row
+        .span10
+          = yield
+        /.span2
+        /  - @posts.each do |post|
+        /    = post.title
+      %hr
+      .container.center
+        %p
+          &copy;
+          = Date.today.year
+          SalesVerge
