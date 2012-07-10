@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-SalesVergeMarketing::Application.load_tasks
+SalesVergeMarketing2::Application.load_tasks

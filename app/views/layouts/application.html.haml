@@ -17,6 +17,10 @@
     .header
       .container
         = image_tag 'salesverge.png', :height => 40, :class => "logo"
+        /%span.pull-right
+        /  = link_to "What is SalesVerge?", "#"
+        /  |
+        /  = link_to "Blog", "#"
         .row
           .span6
             %h1 Turn &ldquo;just-looking&rdquo; customers into buyers.
@@ -24,7 +28,7 @@
             %h4 Sign up and you'll be the first to know when it's available.
             %p
               = text_field_tag :email, "Email Address", :placeholder => "Email address", :style => "margin-right: -4px;height: 26px;"
-              = link_to "Count me in!", nil, :class => "btn btn-success btn-large"      
+              = link_to "Count me in!", "#", :class => "btn btn-success btn-large"
           .span6
             .pull-right
               %iframe{ :src => "http://player.vimeo.com/video/44335339", :width => "400", :height => "225", "frameborder" => "0" }
