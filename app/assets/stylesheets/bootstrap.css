@@ -165,12 +165,12 @@ body {
 }
 
 a {
-  color: #0088cc;
+  color: #5dbb5d;
   text-decoration: none;
 }
 
 a:hover {
-  color: #005580;
+  color: #3f953f;
   text-decoration: underline;
 }
 
@@ -3347,7 +3347,7 @@ input[type="submit"].btn.btn-mini {
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
   color: #ffffff;
-  background-color: #0088cc;
+  background-color: #5dbb5d;
 }
 
 .nav-stacked > li {
