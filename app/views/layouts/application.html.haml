@@ -1,0 +1,60 @@
+!!!
+%html
+  %head
+    %title
+      - if @title
+        =@title
+        |
+      SalesVerge
+      
+    /%link{ :rel => "icon", :type => "image/x-icon", :href => "/assets/favicon.ico" }
+    %meta{ :charset => "utf-8" }
+    =stylesheet_link_tag "application", :media => "all"
+    =javascript_include_tag "application"
+    =csrf_meta_tags
+
+  %body
+    .header
+      .container
+        = image_tag 'salesverge.png', :height => 40, :class => "logo"
+        .row
+          .span6
+            %h1 Turn &ldquo;just-looking&rdquo; customers into buyers.
+            %br
+            %h4 Sign up and you'll be the first to know when it's available.
+            %p
+              = text_field_tag :email, "Email Address", :placeholder => "Email address", :style => "margin-right: -4px;height: 26px;"
+              = link_to "Count me in!", nil, :class => "btn btn-success btn-large"      
+          .span6
+            .pull-right
+              %iframe{ :src => "http://player.vimeo.com/video/44335339", :width => "400", :height => "225", "frameborder" => "0" }
+    .container
+      .row
+        .span12.center
+          = image_tag 'mobile-screens.png', :class => "screens"
+      = yield
+      %ul.thumbnails
+        %li.span4
+          .thumbnail
+            = image_tag 'landing_page_2.jpg'
+            .caption
+              %h3 Automation
+              %p Automatically keep in touch with customers
+        %li.span4
+          .thumbnail
+            = image_tag 'landing_page_1.jpg'
+            .caption
+              %h3 Learn
+              %p Learn more about your customers, without having to ask
+        %li.span4  
+          .thumbnail
+            = image_tag 'landing_page_3.jpg'
+            .caption
+              %h3 Sell More
+              %p Sell more to the "ups" you get each day
+      %hr
+      .container.center
+        %p
+          &copy;
+          = Date.today.year
+          SalesVerge
