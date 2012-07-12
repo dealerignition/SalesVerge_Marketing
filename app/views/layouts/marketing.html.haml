@@ -1,67 +1,63 @@
-!!!
-%html
-  %head
-    %title
-      - if @title
-        =@title
-        |
-      SalesVerge
-      
-    /%link{ :rel => "icon", :type => "image/x-icon", :href => "/assets/favicon.ico" }
-    %meta{ :charset => "utf-8" }
-    =stylesheet_link_tag "application", :media => "all"
-    =javascript_include_tag "application"
-    =csrf_meta_tags
-
-  %body.marketing
-    .header
-      .container
-        .pull-left
-          = link_to image_tag('salesverge.png', :height => 40, :class => "logo"), "/"
-        .pull-right{ :style => "margin-top: 20px;"}
-          %ul.nav.nav-pills{ :style => "margin-bottom: 0px" }
-            %li.active
-              = link_to "What is SalesVerge?", "/"
-            %li
-              = link_to "Blog", "/blog"
-        .clearfix
-        .row
-          %div.pull-left{ :style => "width: 500px; margin-left: 20px;" }
-            %h1 Turn in-store browsers into buyers.
-            %br
-            %h4 Sign up and you'll be the first to know when it's available.
-            %p
-              = text_field_tag :email, "Email Address", :placeholder => "Email address", :style => "margin-right: -4px;height: 26px;"
-              = link_to "Count me in!", "#", :class => "btn btn-success btn-large"
-          %div.pull-right{ :style => "width: 400px" }
-            %iframe{ :src => "http://player.vimeo.com/video/44335339", :width => "400", :height => "225", "frameborder" => "0" }
-    .container
+= render "layouts/head"
+%body.marketing
+  .header
+    .container  
+      .pull-left
+        = link_to image_tag('salesverge.png', :height => 40, :width => 145, :class => "logo"), "/"
+      .pull-right{ :style => "margin-top: 20px;"}
+        .btn-group{ :style => "margin-bottom: 0px" }
+          = link_to "What is SalesVerge?", "/", :class => "btn btn-large btn-success active"
+          = link_to "Blog", "/blog", :class => "btn btn-large btn-success"
+      .clearfix
       .row
-        .span12.center
-          = image_tag 'mobile-screens.png', :class => "screens"
-      %br
-      %ul.thumbnails
-        %li.span4
-          .thumbnail
-            = image_tag 'landing_page_2.jpg'
-            .caption
-              %h3 Automation
-              %p Automatically keep in touch with customers
-        %li.span4
-          .thumbnail
-            = image_tag 'landing_page_1.jpg'
-            .caption
-              %h3 Learn
-              %p Learn more about your customers, without having to ask
-        %li.span4  
-          .thumbnail
-            = image_tag 'landing_page_3.jpg'
-            .caption
-              %h3 Sell More
-              %p Sell more to the "ups" you get each day
-      %hr
-      .container.center
-        %p
-          &copy;
-          = Date.today.year
-          SalesVerge
+        %div.pull-left{ :style => "width: 500px; margin-left: 20px;" }
+          %h1 Turn in-store browsers into buyers.
+          %br
+          %h4{ :style => "margin-bottom: 10px;" } 
+            Sign up and you'll be the first to know when it's available.
+          
+          .sign_up_form
+            %form#form103{ :name => "form103", :autocomplete => "off", :enctype => "multipart/form-data", :method => "post", :action => "https://dealerignition.wufoo.com/forms/z7p8a9/#public"}
+              
+              .input-append
+                %input#Field1.span3{ :name => "Field1", :type => "email", :spellcheck => "false", :value => "", :maxlength => "255", :tabindex => "1" } 
+                %input#saveForm.btn.btn-success.btn-large{ :name => "saveForm", :type => "submit", :value => "SIGN-UP" }
+              
+              .hide{ :style => "display:none" }
+                %label{ :for => "comment" }
+                  Do Not Fill This Out
+                %textarea{ :name => "comment", :id => "comment", :rows => "1", :cols => "1"}
+                %input#idstamp{ :type => "hidden", :name => "idstamp", :value => "677Ekg9h804SzOpIVjRw6YvnPQCR15vgtbrr9fV+2Sw="}
+                
+        %div.pull-right{ :style => "width: 400px" }
+          %iframe{ :src => "http://player.vimeo.com/video/44335339", :width => "400", :height => "225", "frameborder" => "0" }
+  .container
+    .row
+      .span12.center
+        = image_tag 'mobile-screens.png', :class => "screens"
+    %br
+    %ul.thumbnails
+      %li.span4
+        .thumbnail
+          = image_tag 'landing_page_2.jpg'
+          .caption
+            %h3 Automation
+            %p Automatically keep in touch with customers
+      %li.span4
+        .thumbnail
+          = image_tag 'landing_page_1.jpg'
+          .caption
+            %h3 Learn
+            %p Learn more about your customers, without having to ask
+      %li.span4  
+        .thumbnail
+          = image_tag 'landing_page_3.jpg'
+          .caption
+            %h3 Sell More
+            %p Sell more to the "ups" you get each day
+    %hr
+    .container.center
+      %p
+        &copy;
+        = Date.today.year
+        SalesVerge
