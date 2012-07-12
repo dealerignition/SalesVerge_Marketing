@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'haml'
 gem 'rails', '3.2.6'
 gem 'fog'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'sqlite3'
