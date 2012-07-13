@@ -8,6 +8,7 @@ body {
   z-index: 0;
   color: #fff;
   padding: 20px;
+  padding-bottom: 40px;
 }
 
 .header .nav {

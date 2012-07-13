@@ -10,11 +10,29 @@
           = link_to "Blog", "/blog", :class => "btn btn-large btn-success active"
   .container
     .row
-      .span10
+      .span9
         = yield
-      /.span2
-      /  - @posts.each do |post|
-      /    = post.title
+      .span3
+        .right_sidebar
+          %h2 Recent Posts
+          %hr
+          %ul.unstyled
+            - @posts = @posts.find(:all, :order => 'published_at')
+            - @posts.last(5).each do |post|
+              %li
+                = link_to "#{post.title}", "/blog/posts/#{post.slug}"
+              %hr
+          %h2 RSS Feed
+          = link_to "Subscribe", "/blog/feed.rss"
+          %hr
+          / AddThis Button
+          .addthis_toolbox.addthis_default_style
+            %a.addthis_button_facebook_like{ "fb:like:layout" => "button_count"}
+            %a.addthis_button_tweet
+            %a.addthis_counter.addthis_pill_style
+            %script{:type => "text/javascript",
+                    :src  => "http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e25d54826eb110d"}
+          
     %hr
     .container.center
       %p

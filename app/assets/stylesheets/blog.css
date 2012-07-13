@@ -72,3 +72,25 @@
 .blog header {
   margin-bottom: 20px;
 }
+
+.blog .right_sidebar {
+  background: #fff;
+  padding: 10px;
+}
+
+.blog .right_sidebar hr {
+  margin: 5px 0;
+}
+
+.blog .right_sidebar .addthis_toolbox {
+  padding: 10px 0;
+}
+
+.blog .right_sidebar .addthis_toolbox a {
+  float: none;
+}
+
+.blog .right_sidebar .addthis_toolbox .addthis_pill_style {
+  margin-top: 5px;
+  margin-left: 2px;
+}
