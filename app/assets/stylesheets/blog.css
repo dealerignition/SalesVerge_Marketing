@@ -1,5 +1,9 @@
 .blog .logo {
-  margin: 0px 40px 0 0;
+  margin: 8px 40px 0 0;
+}
+
+.blog .header {
+  padding-bottom: 34px;
 }
 
 .blog #body_content, .blog #side_body_content {

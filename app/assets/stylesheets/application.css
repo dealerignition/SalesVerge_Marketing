@@ -11,3 +11,16 @@
  *= require_self
  *= require_tree .
  */
+
+.header .twitter {
+   margin: 9px 20px 0 0;
+}
+
+.header .twitter a {
+   color: #5bc0de;
+}
+
+.header .twitter img {
+  vertical-align: text-top;
+}
+

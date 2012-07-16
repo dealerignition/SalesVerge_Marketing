@@ -3,11 +3,17 @@
   .header
     .container  
       .pull-left
-        = link_to image_tag('salesverge.png', :height => 40, :width => 145, :class => "logo"), "/"
+        = link_to image_tag('salesverge_logo.png', :height => 52, :width => 145, :class => "logo"), "/"
       .pull-right{ :style => "margin-top: 20px;"}
-        .btn-group{ :style => "margin-bottom: 0px" }
+        .btn-group.pull-right{ :style => "margin-bottom: 0px" }
           = link_to "What is SalesVerge?", "/", :class => "btn btn-large btn-success"
           = link_to "Blog", "/blog", :class => "btn btn-large btn-success active"
+        .pull-right.twitter
+          = link_to "https://twitter.com/salesverge", :target => "_blank", :class => "" do
+            = image_tag('twitter_icon.png')
+            Follow 
+            %strong
+              @salesverge
   .container
     .row
       .span9
