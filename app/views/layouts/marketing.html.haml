@@ -1,78 +1,83 @@
-= render "layouts/head"
-%body.marketing
-  .header
-    .container  
-      .pull-left
-        = link_to image_tag('salesverge_logo.png', :height => 52, :width => 145, :class => "logo"), "/"
-      .pull-right{ :style => "margin-top: 20px;"}
-        .btn-group.pull-right{ :style => "margin-bottom: 0px" }
-          = link_to "What is SalesVerge?", "/", :class => "btn btn-large btn-success active"
-          = link_to "Blog", "/blog", :class => "btn btn-large btn-success"
-        .pull-right.twitter
-          = link_to "https://twitter.com/salesverge", :target => "_blank", :class => "" do
-            = image_tag('twitter_icon.png')
-            Follow 
-            %strong
-              @salesverge
-      .clearfix
+- @title = "Turn in-store browsers into buyers"
+!!!
+%html
+  %head
+    = render "layouts/head"
+    %meta{ :name => "description", :content => "SalesVerge is a mobile application that helps salespeople engage with customers"}
+    %meta{ :name => "keywords", :content => "mobile, crm, mobile-crm, marketing, sales, iphone, ipad, ios"}
+  %body.marketing
+    .header
+      .container  
+        .pull-left
+          = link_to image_tag('salesverge_logo.png', :height => 52, :width => 145, :class => "logo", :alt => "SalesVerge"), "/"
+        .pull-right{ :style => "margin-top: 20px;"}
+          .btn-group.pull-right{ :style => "margin-bottom: 0px" }
+            = link_to "What is SalesVerge?", "/", :class => "btn btn-large btn-success active"
+            = link_to "Blog", "/blog", :class => "btn btn-large btn-success"
+          .pull-right.twitter
+            = link_to "https://twitter.com/salesverge", :target => "_blank", :class => "" do
+              = image_tag('twitter_icon.png', :alt => "Follow @salesverge on Twitter")
+              Follow 
+              %strong
+                @salesverge
+        .clearfix
+        .row
+          %div.pull-left{ :style => "width: 500px; margin-left: 20px;" }
+            %h1 Turn in-store browsers into buyers.
+            %br
+            %h4{ :style => "margin-bottom: 10px;" } 
+              Sign up and you'll be the first to know when it's available.
+            .sign_up_form
+              %form#form103{ :name => "form103", :autocomplete => "off", :enctype => "multipart/form-data", :method => "post", :action => "https://dealerignition.wufoo.com/forms/z7p8a9/#public"}
+              
+                .input-append
+                  %input#Field1.span3{ :name => "Field1", :type => "email", :spellcheck => "false", :value => "", :maxlength => "255", :tabindex => "1", :placeholder => "email@example.com" } 
+                  %input#saveForm.btn.btn-success.btn-large{ :name => "saveForm", :type => "submit", :value => "SIGN-UP" }
+              
+                .hide{ :style => "display:none" }
+                  %label{ :for => "comment" }
+                    Do Not Fill This Out
+                  %textarea{ :name => "comment", :id => "comment", :rows => "1", :cols => "1"}
+                  %input#idstamp{ :type => "hidden", :name => "idstamp", :value => "677Ekg9h804SzOpIVjRw6YvnPQCR15vgtbrr9fV+2Sw="}
+            / AddThis Button
+            .addthis_toolbox.addthis_default_style
+              %a.addthis_button_facebook_like{ "fb:like:layout" => "button_count"}
+              %a.addthis_button_tweet
+              %a.addthis_counter.addthis_pill_style
+              %script{:type => "text/javascript",
+                      :src  => "http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e25d54826eb110d"}
+          %div.pull-right{ :style => "width: 400px" }
+            %iframe{ :src => "http://player.vimeo.com/video/44335339", :width => "400", :height => "225", "frameborder" => "0" }
+    .container
       .row
-        %div.pull-left{ :style => "width: 500px; margin-left: 20px;" }
-          %h1 Turn in-store browsers into buyers.
-          %br
-          %h4{ :style => "margin-bottom: 10px;" } 
-            Sign up and you'll be the first to know when it's available.
-          
-          .sign_up_form
-            %form#form103{ :name => "form103", :autocomplete => "off", :enctype => "multipart/form-data", :method => "post", :action => "https://dealerignition.wufoo.com/forms/z7p8a9/#public"}
-              
-              .input-append
-                %input#Field1.span3{ :name => "Field1", :type => "email", :spellcheck => "false", :value => "", :maxlength => "255", :tabindex => "1", :placeholder => "email@example.com" } 
-                %input#saveForm.btn.btn-success.btn-large{ :name => "saveForm", :type => "submit", :value => "SIGN-UP" }
-              
-              .hide{ :style => "display:none" }
-                %label{ :for => "comment" }
-                  Do Not Fill This Out
-                %textarea{ :name => "comment", :id => "comment", :rows => "1", :cols => "1"}
-                %input#idstamp{ :type => "hidden", :name => "idstamp", :value => "677Ekg9h804SzOpIVjRw6YvnPQCR15vgtbrr9fV+2Sw="}
-                
-          / AddThis Button
-          .addthis_toolbox.addthis_default_style
-            %a.addthis_button_facebook_like{ "fb:like:layout" => "button_count"}
-            %a.addthis_button_tweet
-            %a.addthis_counter.addthis_pill_style
-            %script{:type => "text/javascript",
-                    :src  => "http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e25d54826eb110d"}
-                
-        %div.pull-right{ :style => "width: 400px" }
-          %iframe{ :src => "http://player.vimeo.com/video/44335339", :width => "400", :height => "225", "frameborder" => "0" }
-  .container
-    .row
-      .span12.center
-        = image_tag 'mobile-screens.png', :class => "screens"
-    %br
-    %ul.thumbnails
-      %li.span4
-        .thumbnail
-          = image_tag 'landing_page_2.jpg'
-          .caption
-            %h3 Automation
-            %p Automatically keep in touch with customers
-      %li.span4
-        .thumbnail
-          = image_tag 'landing_page_1.jpg'
-          .caption
-            %h3 Learn
-            %p Learn more about your customers, without having to ask
-      %li.span4  
-        .thumbnail
-          = image_tag 'landing_page_3.jpg'
-          .caption
-            %h3 Sell More
-            %p Sell more to the "ups" you get each day
-    %hr
-    .container.center
-      %p
-        &copy;
-        = Date.today.year
-        SalesVerge
-  = render "layouts/clicky"
+        .span12.center
+          = image_tag 'mobile_marketing_crm_sales_tool.png', :class => "screens", :alt => 'Mobile marketing CRM sales tool'
+      %br
+      %ul.thumbnails
+        %li.span4
+          .thumbnail
+            = image_tag 'easily_keep_up_with_customers.jpg', :alt => 'Easily keep up with customers'
+            .caption
+              %h3 Automation
+              %p Automatically keep in touch with customers
+        %li.span4
+          .thumbnail
+            = image_tag 'learn_about_your_customers.jpg', :alt => 'Learn more about your customers'
+            .caption
+              %h3 
+                %strong
+                  Learn
+              %p Learn more about your customers, without having to ask
+        %li.span4  
+          .thumbnail
+            = image_tag 'sell_more.jpg', :alt => 'Sell more to your customers'
+            .caption
+              %h3 Sell More
+              %p Sell more to the "ups" you get each day
+      %hr
+      .container.center
+        %p
+          &copy;
+          = Date.today.year
+          SalesVerge
+    = render "layouts/clicky"

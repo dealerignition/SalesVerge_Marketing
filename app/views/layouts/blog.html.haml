@@ -1,48 +1,61 @@
-= render "layouts/head"
-%body.blog
-  .header
-    .container  
-      .pull-left
-        = link_to image_tag('salesverge_logo.png', :height => 52, :width => 145, :class => "logo"), "/"
-      .pull-right{ :style => "margin-top: 20px;"}
-        .btn-group.pull-right{ :style => "margin-bottom: 0px" }
-          = link_to "What is SalesVerge?", "/", :class => "btn btn-large btn-success"
-          = link_to "Blog", "/blog", :class => "btn btn-large btn-success active"
-        .pull-right.twitter
-          = link_to "https://twitter.com/salesverge", :target => "_blank", :class => "" do
-            = image_tag('twitter_icon.png')
-            Follow 
-            %strong
-              @salesverge
-  .container
-    .row
-      .span9
-        = yield
-      .span3
-        .right_sidebar
-          %h2 Recent Posts
-          %hr
-          %ul.unstyled
-            - @posts = @posts.find(:all, :order => 'published_at')
-            - @posts.last(5).each do |post|
-              %li
-                = link_to "#{post.title}", "/blog/posts/#{post.slug}"
-              %hr
-          %h2 RSS Feed
-          = link_to "Subscribe", "/blog/feed.rss"
-          %hr
-          / AddThis Button
-          .addthis_toolbox.addthis_default_style
-            %a.addthis_button_facebook_like{ "fb:like:layout" => "button_count"}
-            %a.addthis_button_tweet
-            %a.addthis_counter.addthis_pill_style
-            %script{:type => "text/javascript",
-                    :src  => "http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e25d54826eb110d"}
-          
-    %hr
-    .container.center
-      %p
-        &copy;
-        = Date.today.year
-        SalesVerge
-  = render "layouts/clicky"
+- @current_post = @posts.find_by_slug(params[:id])
+-unless @current_post == nil
+  - @title = "#{@current_post.title}"
+-else
+  - @title = "The SalesVerge Blog - mobile technology and marketing"
+!!!
+%html
+  %head
+    = render "layouts/head"
+    -unless @current_post == nil
+      %meta{ :name => "description", :content => "#{@current_post.seo_meta.meta_description}"}
+      %meta{ :name => "keywords", :content => "#{@current_post.seo_meta.meta_keywords}"}
+    -else
+      %meta{ :name => "description", :content => "The SalesVerge blog provides insight on marketing and mobile technology"}
+      %meta{ :name => "keywords", :content => "mobile, crm, mobile-crm, marketing, sales, iphone, ipad, ios, blog"}
+  %body.blog
+    .header
+      .container  
+        .pull-left
+          = link_to image_tag('salesverge_logo.png', :height => 52, :width => 145, :class => "logo", :alt => "SalesVerge"), "/"
+        .pull-right{ :style => "margin-top: 20px;"}
+          .btn-group.pull-right{ :style => "margin-bottom: 0px" }
+            = link_to "What is SalesVerge?", "/", :class => "btn btn-large btn-success"
+            = link_to "Blog", "/blog", :class => "btn btn-large btn-success active"
+          .pull-right.twitter
+            = link_to "https://twitter.com/salesverge", :target => "_blank", :class => "" do
+              = image_tag('twitter_icon.png', :alt => "Follow @salesverge on Twitter")
+              Follow 
+              %strong
+                @salesverge
+    .container
+      .row
+        .span9
+          = yield
+        .span3
+          .right_sidebar
+            %h2 Recent Posts
+            %hr
+            %ul.unstyled
+              - @posts = @posts.find(:all, :order => 'published_at')
+              - @posts.last(5).each do |post|
+                %li
+                  = link_to "#{post.title}", "/blog/posts/#{post.slug}"
+                %hr
+            %h2 RSS Feed
+            = link_to "Subscribe", "/blog/feed.rss"
+            %hr
+            / AddThis Button
+            .addthis_toolbox.addthis_default_style
+              %a.addthis_button_facebook_like{ "fb:like:layout" => "button_count"}
+              %a.addthis_button_tweet
+              %a.addthis_counter.addthis_pill_style
+              %script{:type => "text/javascript",
+                      :src  => "http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e25d54826eb110d"}
+      %hr
+      .container.center
+        %p
+          &copy;
+          = Date.today.year
+          SalesVerge
+    = render "layouts/clicky"
