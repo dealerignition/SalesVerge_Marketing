@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require_tree .
+ *= require 'font-awesome'
  */
 
 .header .twitter {
@@ -24,3 +25,12 @@
   vertical-align: text-top;
 }
 
+.big-icon {
+  position: relative;
+  color: #ddd;
+  font-size: 140px;
+  text-align: center;
+  z-index: 0;
+  margin-top: -40px;
+  margin-bottom: 60px;
+}

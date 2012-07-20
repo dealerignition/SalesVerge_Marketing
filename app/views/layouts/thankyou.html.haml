@@ -1,0 +1,40 @@
+- @title = "Turn in-store browsers into buyers"
+!!!
+%html
+  %head
+    = render "layouts/head"
+    %meta{ :name => "description", :content => "SalesVerge is a mobile application that helps salespeople engage with customers"}
+    %meta{ :name => "keywords", :content => "mobile, crm, mobile crm, marketing, sales, iphone, ipad, ios, personal, salesverge, sales verge, customer followup" }
+  %body.marketing
+    .header
+      .container  
+        .pull-left
+          = link_to image_tag('salesverge_logo.png', :height => 52, :width => 145, :class => "logo", :alt => "SalesVerge"), "/"
+        .pull-right{ :style => "margin-top: 20px;"}
+          .btn-group.pull-right{ :style => "margin-bottom: 0px" }
+            = link_to "What is SalesVerge?", "/", :class => "btn btn-large btn-success"
+            = link_to "Blog", "/blog", :class => "btn btn-large btn-success"
+          .pull-right.twitter
+            = link_to "https://twitter.com/salesverge", :target => "_blank", :class => "" do
+              = image_tag('twitter_icon.png', :alt => "Follow @salesverge on Twitter")
+              Follow
+              %strong
+                @salesverge
+        .clearfix
+        %h1
+          %i.icon-ok-sign{ :style => 'color: #37b34a' }
+          Thanks for your interest!
+        %h4 As promised, you'll be the first to know when SalesVerge is available in the App Store.
+
+    .container
+      %br
+      = yield
+      
+      %hr
+      .container.center
+        %p
+          &copy;
+          = Date.today.year
+          SalesVerge
+    = render "layouts/clicky"
+    = render 'shared/net_results'

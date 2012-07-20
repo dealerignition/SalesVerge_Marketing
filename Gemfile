@@ -4,6 +4,7 @@ gem 'haml'
 gem 'rails', '3.2.6'
 gem 'fog'
 gem 'newrelic_rpm'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'sqlite3'
