@@ -38,5 +38,6 @@
           &copy;
           = Date.today.year
           SalesVerge
-    = render "layouts/clicky"
-    = render 'shared/net_results'
+    - unless Rails.env.development?
+      = render "layouts/clicky"
+    = render "shared/net_results"
