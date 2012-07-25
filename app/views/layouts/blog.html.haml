@@ -40,7 +40,7 @@
             %hr
             %ul.unstyled
               - @posts = @posts.find(:all, :order => 'published_at')
-              - @posts.last(5).each do |post|
+              - @posts.first(5).each do |post|
                 %li
                   = link_to "#{post.title}", "/blog/posts/#{post.slug}"
                 %hr
