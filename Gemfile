@@ -8,6 +8,7 @@ gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'heroku'
 end
 
 group :production do
