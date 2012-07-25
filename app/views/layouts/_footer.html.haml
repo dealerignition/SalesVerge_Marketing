@@ -1,0 +1,31 @@
+.footer
+  .container
+    .row.pull-left
+      %h3 Select Posts
+      .span5
+        %ul.unstyled
+          %li 
+            %a{ :href => "/blog/posts/mobile-integration-increasing-worker-productivity" }
+              Mobile integration increasing worker productivity (infographic)
+          %li 
+            %a{ :href => "/blog/posts/you-just-lost-a-sale-to-your-coworker" }
+              You just lost a sale...to your coworker
+          %li 
+            %a{ :href => "/blog/posts/turn-browsers-into-buyers-with-salesverge" }
+              Turn browsers into buyers, with SalesVerge
+      .span5
+        %ul.unstyled
+          %li 
+          %li 
+          %li 
+    .span2.pull-right
+      = link_to image_tag('salesverge_logo.png', :height => 52, :width => 145, :alt => "SalesVerge"), "/"
+      %p.copyright
+        &copy;
+        = Date.today.year
+        SalesVerge
+      = link_to "https://twitter.com/salesverge", :target => "_blank", :id => "twitter" do
+        = image_tag('twitter_icon.png', :alt => "Follow @salesverge on Twitter")
+        Follow
+        %strong
+          @salesverge

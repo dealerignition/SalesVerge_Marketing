@@ -13,18 +13,18 @@
  *= require 'font-awesome'
  */
 
+ul#blog_posts .clearfix::before, ul#blog_posts .clearfix::after {
+  display: inline;
+} 
 .header .twitter {
    margin: 9px 20px 0 0;
 }
-
 .header .twitter a {
    color: #5bc0de;
 }
-
 .header .twitter img {
   vertical-align: text-top;
 }
-
 .big-icon {
   position: relative;
   color: #ddd;
@@ -33,4 +33,24 @@
   z-index: 0;
   margin-top: -40px;
   margin-bottom: 60px;
+}
+.footer {
+  padding: 40px 0;
+  padding-bottom: 60px;
+  background: #111; 
+  height: 100%; 
+  width: 100%; 
+  position: relative;
+}
+.footer {
+  color: #c2c2c2;
+}
+.footer .pull-right {
+  text-align: right;
+}
+.footer a#twitter {
+  color: #5BC0DE;
+}
+.footer a#twitter img {
+  vertical-align: text-top;
 }

@@ -45,7 +45,8 @@
                   = link_to "#{post.title}", "/blog/posts/#{post.slug}"
                 %hr
             %h2 RSS Feed
-            = link_to "Subscribe", "/blog/feed.rss"
+            = link_to "/blog/feed.rss", :class => "btn" do
+              Subscribe
             %hr
             / AddThis Button
             .addthis_toolbox.addthis_default_style
@@ -54,11 +55,6 @@
               %a.addthis_counter.addthis_pill_style
               %script{:type => "text/javascript",
                       :src  => "http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e25d54826eb110d"}
-      %hr
-      .container.center
-        %p
-          &copy;
-          = Date.today.year
-          SalesVerge
+    = render "layouts/footer"
     - unless Rails.env.development?
       = render "layouts/clicky"

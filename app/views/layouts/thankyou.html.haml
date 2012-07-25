@@ -30,14 +30,10 @@
 
     .container
       %br
-      = yield
       
-      %hr
-      .container.center
-        %p
-          &copy;
-          = Date.today.year
-          SalesVerge
+      = yield
+  
+    = render "layouts/footer"
     - unless Rails.env.development?
       = render "layouts/clicky"
     = render "shared/net_results"

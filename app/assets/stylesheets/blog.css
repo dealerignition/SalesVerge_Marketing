@@ -1,17 +1,17 @@
+.blog #body_content_right {
+  display: none;
+}
 .blog .logo {
   margin: 8px 40px 0 0;
 }
-
 .blog .header {
   padding-bottom: 34px;
 }
-
 .blog #body_content, .blog #side_body_content {
  background: white;
  color: #333;
  padding: 20px;
 }
-
 .blog #body_content h1 {
   margin-top: 20px;
   margin-bottom: 0;
@@ -20,34 +20,28 @@
   letter-spacing: -1px;
   color: inherit;
 }
-
 .blog #body_content_title {
   display: none;
 }
-
 .blog .comment_count {
   display: none;
 }
-
 .blog #body_content_left {
   border-bottom: 1px solid #ebebeb;
   padding-bottom: 30px;
   margin-bottom: 30px;
 }
-
 .blog .details {
   font-style: italic;
   color: #999;
   font-size: 12px;
 }
-
 .blog #body_content p {
   font-size: 18px;
   font-weight: 200;
   line-height: 27px;
   color: inherit;
 }
-
 .blog #comments {
   display: none;
   border-top: 1px solid #ebebeb;
@@ -55,28 +49,31 @@
   margin-top: 30px;
   color: #666;
 }
-
 .blog header {
   margin-bottom: 20px;
 }
-
 .blog .right_sidebar {
   background: #fff;
   padding: 10px;
+  box-shadow: 0px 0px 12px 0px #999;
+  -moz-box-shadow: 0px 0px 12px 0px #999;
+  -webkit-box-shadow: 0px 0px 12px 0px #999;
+  -webkit-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
-
 .blog .right_sidebar hr {
   margin: 5px 0;
 }
-
 .blog .right_sidebar .addthis_toolbox {
   padding: 10px 0;
 }
-
 .blog .right_sidebar .addthis_toolbox a {
   float: none;
 }
-
 .blog .right_sidebar .addthis_toolbox .addthis_pill_style {
   margin-top: 5px;
   margin-left: 2px;
