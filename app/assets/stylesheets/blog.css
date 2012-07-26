@@ -15,7 +15,7 @@
 .blog #body_content h1 {
   margin-top: 20px;
   margin-bottom: 0;
-  font-size: 50px;
+  font-size: 40px;
   line-height: 1;
   letter-spacing: -1px;
   color: inherit;
@@ -37,10 +37,19 @@
   font-size: 12px;
 }
 .blog #body_content p {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 200;
-  line-height: 27px;
+  line-height: 25px;
   color: inherit;
+}
+.blog #body_content p a {
+  color: #2f96b4;
+}
+.blog #body_content p a:hover {
+  color: #24748c;
+}
+.blog #body_content p a:visited {
+  text-decoration: underline;
 }
 .blog #comments {
   display: none;
