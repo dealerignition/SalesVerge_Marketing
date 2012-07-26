@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+!!! XML
+%urlset{:xmlns => "http://www.sitemaps.org/schemas/sitemap/0.9"}
+  %url
+    %loc http://www.salesverge.com
+    %lastmod 2012-07-24
+    %priority 1.0
+  %url
+    %loc http://www.salesverge.com/blog
+    %lastmod 2012-07-24
+    %priority 0.66
+
+  - @posts.each do |post|
+    %url
+      %loc http://www.salesverge.com/blog/posts/#{post.slug}
+      %lastmod=post.updated_at.strftime("%Y-%m-%d")
+      %priority 0.33
