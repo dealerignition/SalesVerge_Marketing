@@ -13,6 +13,8 @@
     -else
       %meta{ :name => "description", :content => "The SalesVerge blog provides insight on marketing and mobile technology"}
       %meta{ :name => "keywords", :content => "mobile, crm, mobile-crm, marketing, sales, iphone, ipad, ios, blog"}
+    - unless Rails.env.development?
+      = render "shared/google_analytics"
   %body.blog
     .header
       .container  
@@ -57,4 +59,4 @@
                       :src  => "http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e25d54826eb110d"}
     = render "layouts/footer"
     - unless Rails.env.development?
-      = render "layouts/clicky"
+      = render "shared/clicky"
