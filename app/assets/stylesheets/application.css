@@ -54,3 +54,11 @@ ul#blog_posts .clearfix::before, ul#blog_posts .clearfix::after {
 .footer a#twitter img {
   vertical-align: text-top;
 }
+
+a.subtle {
+  color: #333;
+}
+a.subtle:hover {
+  color: #555;
+  text-decoration: underline;
+}

@@ -9,10 +9,8 @@
     = render "layouts/head"
     -unless @current_post == nil
       %meta{ :name => "description", :content => "#{@current_post.seo_meta.meta_description}"}
-      %meta{ :name => "keywords", :content => "#{@current_post.seo_meta.meta_keywords}"}
     -else
       %meta{ :name => "description", :content => "The SalesVerge blog provides insight on marketing and mobile technology"}
-      %meta{ :name => "keywords", :content => "mobile, crm, mobile-crm, marketing, sales, iphone, ipad, ios, blog"}
     - unless Rails.env.development?
       = render "shared/google_analytics"
   %body.blog
