@@ -20,10 +20,10 @@
           = link_to image_tag('salesverge_logo.png', :height => 52, :width => 145, :class => "logo", :alt => "SalesVerge"), "/"
         .pull-right{ :style => "margin-top: 20px;"}
           .btn-group.pull-right{ :style => "margin-bottom: 0px" }
-            = link_to "/", :class => "btn btn-large btn-success" do
+            = link_to "#{HOST}/", :class => "btn btn-large btn-success" do
               %i.icon-home
-            = link_to "What is SalesVerge?", "/#what", :class => "btn btn-large btn-success"
-            = link_to "Blog", "/blog", :class => "btn btn-large btn-success active"
+            = link_to "What is SalesVerge?", "#{HOST}/#what", :class => "btn btn-large btn-success"
+            = link_to "Blog", "#{HOST}/blog", :class => "btn btn-large btn-success active"
           .pull-right.twitter
             = link_to "https://twitter.com/salesverge", :target => "_blank", :class => "" do
               = image_tag('twitter_icon.png', :alt => "Follow @salesverge on Twitter")
