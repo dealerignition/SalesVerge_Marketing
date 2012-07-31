@@ -1,10 +1,9 @@
 SalesVergeMarketing2::Application.routes.draw do
 
   resources :thankyou
-
+  match '/ipad' => 'page#ipad'
+  match '/mobile_infographic' => redirect("http://www.salesverge.com/blog/posts/close-more-sales-using-mobile-technology")
   resources :sitemap
-  
-  match "/mobile_infographic" => redirect("http://www.salesverge.com/blog/posts/close-more-sales-using-mobile-technology")
   
   # This line mounts Refinery's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.

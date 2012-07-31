@@ -1,21 +1,12 @@
 .marketing .logo {
   margin: 8px 40px 28px 0;
 }
-
 .marketing h1 {
   margin-bottom: 0;
   font-size: 50px;
   line-height: 1;
   letter-spacing: -1px;
   color: inherit;
-}
-
-.marketing #Field1 {
-  height: 27px;
-}
-
-.marketing #saveForm {
-  margin-left: -5px;
 }
 .marketing #what {
   border: 1px solid #DDD;

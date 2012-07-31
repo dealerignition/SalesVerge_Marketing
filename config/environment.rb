@@ -5,7 +5,7 @@ require File.expand_path('../application', __FILE__)
 SalesVergeMarketing2::Application.initialize!
 
 if Rails.env.development?
-  HOST = "localhost:3000"
+  HOST = "http://localhost:3000"
 else
   HOST = "http://www.salesverge.com"
 end
