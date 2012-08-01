@@ -6,7 +6,8 @@
   .span7
     %br
     .btn-group
-      
+      = link_to "iPad", "#{HOST}/ipad", :class => "btn active border-fix"
+      = link_to "iPhone", "#{HOST}/iphone", :class => "btn border-fix"
     %br
     %h1 
       Sales Tools.
@@ -14,20 +15,20 @@
       On Your iPad.
     %br
     %p
-      Use an <strong>iPad</strong> in your sales process? Carry a powerful <strong>sales tool</strong> where-ever you go. SalesVerge is a <strong>business</strong>
-      app for the <strong>iPad</strong> made to help you keep track of 
+      Use an <strong>iPad</strong> in your sales process? Carry a powerful <strong>sales tool</strong> where-ever you go. 
+      SalesVerge is a <strong>business</strong> app for the <strong>iPad</strong> made to help you keep track of 
       customers even before they buy from you.
     %br
     %ul.thumbnails
       %li.span2
         .thumbnail
-          %img{ :src => "assets/engage-customers.jpg", :alt => "Do This" }
+          %img{ :src => "assets/engage-customers.jpg", :alt => "Engage customers - iPad" }
       %li.span2
         .thumbnail
-          %img{ :src => "assets/connect-with-customers.jpg", :alt => "Do This" }
+          %img{ :src => "assets/connect-with-customers.jpg", :alt => "Connect with customers - iPad" }
       %li.span2
         .thumbnail
-          %img{ :src => "assets/sell-more.jpg", :alt => "Do This" }    
+          %img{ :src => "assets/sell-more.jpg", :alt => "Keep customers coming back for more - iPad" }    
     .sign_up_form
       %form#form103{ :name => "form103", :autocomplete => "off", :enctype => "multipart/form-data", :method => "post", :action => "https://dealerignition.wufoo.com/forms/z7p8a9/#public"}
         .input-append
@@ -41,5 +42,8 @@
       %h4 Enter your email and you can get an opportunity to try the app today!
   
   .span5
-    %img.pull-right{ :src => "assets/ipad-sales-tool.png", :alt => "Business Tool", :width => "371", :height => "530" }
+    %img.pull-right{ :src => "assets/ipad-sales-tool.png", :alt => "Business Tools on Your iPad", :width => "371", :height => "530" }
+  .span12
+    %hr
+    %br
     

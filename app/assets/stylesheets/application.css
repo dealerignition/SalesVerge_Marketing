@@ -62,3 +62,6 @@ a.subtle:hover {
   color: #555;
   text-decoration: underline;
 }
+p.copyright {
+  font-size: 13px;
+}

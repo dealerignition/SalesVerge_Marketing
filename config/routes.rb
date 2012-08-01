@@ -2,6 +2,7 @@ SalesVergeMarketing2::Application.routes.draw do
 
   resources :thankyou
   match '/ipad' => 'page#ipad'
+  match '/iphone' => 'page#iphone'
   match '/mobile_infographic' => redirect("http://www.salesverge.com/blog/posts/close-more-sales-using-mobile-technology")
   resources :sitemap
   
