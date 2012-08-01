@@ -12,7 +12,7 @@
  *= require_tree .
  *= require 'font-awesome'
  */
-
+ 
 ul#blog_posts .clearfix::before, ul#blog_posts .clearfix::after {
   display: inline;
 } 
@@ -54,7 +54,6 @@ ul#blog_posts .clearfix::before, ul#blog_posts .clearfix::after {
 .footer a#twitter img {
   vertical-align: text-top;
 }
-
 a.subtle {
   color: #333;
 }
@@ -64,4 +63,55 @@ a.subtle:hover {
 }
 p.copyright {
   font-size: 13px;
+}
+form {
+  margin: 0;
+}
+.header {
+  background: #222 url(../assets/black_linen_v2.png);
+  position: relative;
+  z-index: 0;
+  color: #fff;
+  padding: 20px;
+  padding-bottom: 34px;
+}
+.header .nav {
+  font-size: 16px;
+  margin-top: -14px;
+}
+.header .nav a:hover {
+  text-decoration: none;
+}
+.blog .logo, .page .logo {
+  margin: 8px 40px 0 0;
+}
+.screens {
+  z-index: 10;
+  margin-top: -50px;
+  position: relative;
+}
+.center {
+  text-align: center;
+}
+.clearfix {
+  clear: both;
+}
+a.border-fix {
+  border: 1px solid #AAA;
+}
+#Field1 {
+  height: 27px;
+}
+#saveForm {
+  margin-left: -5px;
+}
+a.hero-link {
+  text-decoration: underline;
+  color: #2f96b4;
+}
+a.hero-link:hover {
+  color: #24748c;
+}
+body {
+   background-color: #f4f4f4;
 }
