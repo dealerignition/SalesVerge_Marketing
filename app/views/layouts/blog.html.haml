@@ -11,11 +11,15 @@
 %html
   %head
     = render "layouts/head"
-    -unless @current_post == nil
+    -if params[:action] == "show" && @current_post != nil
       %meta{ :name => "description", :content => "#{@current_post.seo_meta.meta_description}"}
+    -elsif params[:action] == "tagged"
+      %meta{ :name => "description", :content => "SalesVerge blog posts tagged: #{params[:tag_name]}"}
+    -elsif params[:action] == "archive"
+      %meta{ :name => "description", :content => "SalesVerge Blog Archive for #{params[:month]}/#{params[:year]}"}
     -else
       %meta{ :name => "description", :content => "The SalesVerge blog provides insight on marketing and mobile technology"}
-    - unless Rails.env.development?
+    -unless Rails.env.development?
       = render "shared/google_analytics"
   %body.blog
     .header
