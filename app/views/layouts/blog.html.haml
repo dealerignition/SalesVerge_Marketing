@@ -1,6 +1,10 @@
 - @current_post = @posts.find_by_slug(params[:id])
--unless @current_post == nil
+-if params[:action] == "show" && @current_post != nil
   - @title = "#{@current_post.title}"
+-elsif params[:action] == "tagged"
+  - @title = "#{params[:tag_name].capitalize} Blog Posts - The SalesVerge Blog"
+-elsif params[:action] == "archive"
+  - @title = "SalesVerge Blog Archive: #{params[:month]}/#{params[:year]}"
 -else
   - @title = "The SalesVerge Blog - mobile technology and marketing"
 !!!
