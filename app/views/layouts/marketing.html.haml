@@ -1,4 +1,4 @@
-- @title = "Turn in-store browsers into buyers"
+- @title = "Mobile Sales App for iPad, iPhone, or Web"
 !!!
 %html
   %head
@@ -7,87 +7,96 @@
     - unless Rails.env.development?
       = render "shared/google_analytics"
   %body.marketing
-    .header
-      .container  
-        .pull-left
-          = link_to image_tag('salesverge_logo.png', :height => 52, :width => 145, :class => "logo", :alt => "SalesVerge"), "/"
-        .pull-right{ :style => "margin-top: 20px;"}
-          .btn-group.pull-right{ :style => "margin-bottom: 0px" }
-            = link_to "#{HOST}/", :class => "btn btn-large btn-success active" do
-              %i.icon-home
-            %a{:href => "javascript:void(0)", :onclick => "goToByScroll('what')", :class => "btn btn-large btn-success"}
-              What is SalesVerge?
-            = link_to "Help", "http://help.salesverge.com", :class => "btn btn-large btn-success"
-            = link_to "Blog", "#{HOST}/blog", :class => "btn btn-large btn-success"
-          .pull-right.twitter
-            = link_to "https://twitter.com/salesverge", :target => "_blank", :class => "" do
-              = image_tag('twitter_icon.png', :alt => "Follow @salesverge on Twitter")
-              Follow
-              %strong
-                @salesverge
-        .clearfix
+
+    / TOP BAR CONTENT
+    .dark-bar
+      .container
         .row
-          %div.pull-left{ :style => "width: 500px; margin-left: 20px;" }
-            %h1 Turn in-store browsers into buyers.
+          .span12
             %br
-            %h4{ :style => "margin-bottom: 10px;" }
-              Sign up and you'll be the first to know when it's available in the App Store.
-            .sign_up_form
-              %form#form103{ :name => "form103", :autocomplete => "off", :enctype => "multipart/form-data", :method => "post", :action => "https://dealerignition.wufoo.com/forms/z7p8a9/#public"}
-                .input-append
-                  %input#Field1.span3{ :name => "Field1", :type => "email", :spellcheck => "false", :value => "", :maxlength => "255", :tabindex => "1", :placeholder => "email@example.com" } 
-                  %input#saveForm.btn.btn-success.btn-large{ :name => "saveForm", :type => "submit", :value => "SIGN-UP" }
-                .hide{ :style => "display:none" }
-                  %label{ :for => "comment" }
-                    (empty)
-                  %textarea{ :name => "comment", :id => "comment", :rows => "1", :cols => "1"}
-                  %input#idstamp{ :type => "hidden", :name => "idstamp", :value => "677Ekg9h804SzOpIVjRw6YvnPQCR15vgtbrr9fV+2Sw="}
-            / AddThis Button
-            .addthis_toolbox.addthis_default_style
-              %a.addthis_button_facebook_like{ "fb:like:layout" => "button_count"}
-              %a.addthis_button_tweet
-              %script{:type => "text/javascript",
-                      :src  => "http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e25d54826eb110d"}
-          %div.pull-right{ :style => "width: 400px" }
-            %iframe{ :src => "http://player.vimeo.com/video/44335339", :width => "400", :height => "225", "frameborder" => "0" }
+            %br
+            %img{:src => "/assets/salesverge_logo.png", :height=>"52", :width=>"145", :class=>"logo", :alt=>"SalesVerge Logo"}
+
+    / MAIN HERO CONTENT
     .container
-      .row
-        .span12.center
-          = image_tag 'mobile_marketing_crm_sales_tool.png', :class => "screens", :alt => 'Mobile marketing CRM sales tool'
-      %br
-      .hero-unit#what
-        %h1
-          What is SalesVerge?
-        %p
-          SalesVerge is a <strong>business app</strong> for the 
-          %a{ :href => "#{HOST}/ipad", :class => "hero-link" } <strong>iPad</strong>
-          and 
-          %a{ :href => "#{HOST}/iphone", :class => "hero-link"  } <strong>iPhone</strong>
-          made to help you keep track of customers even <em>before</em> they buy from you. 
-          SalesVerge manages your customer relationships <em>on and off</em> the showroom floor. 
-          Your customers come back to you, not another salesperson.
-      %br
-      %ul.thumbnails
-        %li.span4
-          .thumbnail
-            = image_tag 'easily_keep_up_with_customers.jpg', :alt => 'Easily keep up with customers'
-            .caption
-              %h3 Automation
-              %p Automatically keep in touch with customers with <strong>automated</strong> emails.
-        %li.span4
-          .thumbnail
-            = image_tag 'learn_about_your_customers.jpg', :alt => 'Learn more about your customers'
-            .caption
-              %h3 
-                %strong
-                  Learn
-              %p Learn more about your customers, without having to ask right on your <strong>iPad</strong> or <strong>iPhone</strong>.
-        %li.span4  
-          .thumbnail
-            = image_tag 'sell_more.jpg', :alt => 'Sell more to your customers'
-            .caption
-              %h3 Sell More
-              %p Sell more to the "ups" you get each day &mdash; help your <strong>business sales</strong>.
+      .left-content
+        .row
+          .span12
+            %h1.main Mobile Sales App
+        .row    
+          .span5
+            .info-unit
+              %ul.unstyled
+                %li
+                  %i.icon-ok
+                  Manage Customers with built-in CRM
+                %li
+                  %i.icon-ok
+                  Re-market to them
+                %li
+                  %i.icon-ok
+                  Get them back in the store to buy
+                %li
+                  %i.icon-ok
+                  All from a mobile device or browser
+              %hr.style-six    
+              .sign-up
+                %form#form103{ :name => "form103", 
+                               :autocomplete => "off", 
+                               :enctype => "multipart/form-data", 
+                               :method => "post", 
+                               :action => "https://dealerignition.wufoo.com/forms/z7p8a9/#public" }
+                               
+                  .input-append
+                    %h2.try 
+                      Try it!
+                      %i.icon-chevron-down
+                    .float-left{:style => "float:left"}
+                      %input#Field1.span3{ :name => "Field1",       :type => "email", 
+                                           :spellcheck => "false",  :value => "", 
+                                           :maxlength => "255",     :tabindex => "1", 
+                                           :placeholder => "email@example.com" }
+                                           
+                      %input#saveForm.btn.btn-large.btn-primary{ :name=>"saveForm", :type=>"submit", :value=>"TRY THE APP!" }
+                    .clearfix
+                  .hide{ :style => "display:none" }
+                    %label{ :for => "comment" }
+                      (empty)
+                    %textarea{ :name => "comment", :id => "comment", :rows => "1", :cols => "1"}
+                    %input#idstamp{ :type => "hidden", :name => "idstamp", :value => "677Ekg9h804SzOpIVjRw6YvnPQCR15vgtbrr9fV+2Sw="}
+            .description{:style => "margin-top:20px"}
+              SalesVerge is a <strong>business app</strong> for the <a class='hero-link' href='http://www.salesverge.com/ipad'><strong>iPad</strong></a>
+              and <a class='hero-link' href='http://www.salesverge.com/iphone'><strong>iPhone</strong></a> made to help you keep track of customers even <em>before</em> 
+              they buy from you. SalesVerge manages your customer relationships <em>on and off</em> the showroom floor. Your customers come back to you, not another salesperson.
+          
+          / HERO GRAPHICS
+          .span7
+            %img#hero1.pull-right{:src => "/assets/iphone-sales-tool.png", :style=>"margin-top: -65px;", :alt=>"FIXME"}
+
+    / LOWER WHITE-BG CONTENT    
+    .white-bg
+      .container
+        .row
+          .span12
+            %h2.secondary Turn 'just looking' customers into buyers!
+            .thumbnails
+              .span4
+                .thumbnail
+                  %img{ :src => "http://placehold.it/290x180", :alt=>"FIXME"}
+                  .caption                                   
+                    %h5 Thumbnail label                      
+              .span4                                         
+                .thumbnail                                   
+                  %img{ :src => "http://placehold.it/290x180", :alt=>"FIXME"}
+                  .caption                                   
+                    %h5 Thumbnail label                      
+              .span4                                         
+                .thumbnail                                   
+                  %img{ :src => "http://placehold.it/290x180", :alt=>"FIXME"}
+                  .caption
+                    %h5 Thumbnail label   
+
+    / FOOTER AND OTHER THINGS    
     = render "layouts/footer"
     - unless Rails.env.development?
       = render "shared/clicky"

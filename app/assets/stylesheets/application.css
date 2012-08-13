@@ -1,117 +1,110 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
  *= require_self
  *= require_tree .
  *= require 'font-awesome'
  */
- 
-ul#blog_posts .clearfix::before, ul#blog_posts .clearfix::after {
-  display: inline;
-} 
-.header .twitter {
-   margin: 9px 20px 0 0;
+body {
+  background: #e9e9e9 url(noise_lines.png) repeat;
+  font-family: 'Kreon', serif;
 }
-.header .twitter a {
-   color: #5bc0de;
+#hero1 {
+  transform:rotate();
+  -ms-transform:rotate();
+  -moz-transform:rotate();
+  -webkit-transform:rotate();
+  -o-transform:rotate();
 }
-.header .twitter img {
-  vertical-align: text-top;
+div.dark-bar {
+  background: #e9e9e9 url(dark_leather.png) repeat;
+  padding-bottom: 25px;
 }
-.big-icon {
-  position: relative;
-  color: #ddd;
-  font-size: 140px;
-  text-align: center;
-  z-index: 0;
-  margin-top: -40px;
-  margin-bottom: 60px;
+.left-content {
+  padding-top: 55px;
 }
-.footer {
-  padding: 40px 0;
-  padding-bottom: 60px;
-  background: #111; 
-  height: 100%; 
-  width: 100%; 
-  position: relative;
+h1.main {
+  font-size: 65px;
+  line-height: 70px;
+  letter-spacing: -2px;
+  text-shadow: -2px 2px 1px #ffffff;
+  filter: dropshadow(color=#ffffff, offx=-2, offy=2);
 }
-.footer {
-  color: #c2c2c2;
+h2.secondary {
+  font-size: 50px;
+  line-height: 70px;
+  margin-bottom: 10px;
 }
-.footer .pull-right {
-  text-align: right;
+h2.try {
+  float: left;
+  color: gold;
+  margin-right: 10px;
 }
-.footer a#twitter {
-  color: #5BC0DE;
+h3.third {
+  font-size: 22px;
+  line-height: 30px;
 }
-.footer a#twitter img {
-  vertical-align: text-top;
+.info-unit {
+  background: #37b34a url(green-bg.jpg) repeat;
+  padding: 20px;
+  border: 1px solid #1F652A;
+  margin-top: 20px;
+  color: #ffffff;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow:  0px 0px 20px 3px rgba(70, 70, 70, 0.5);
+          box-shadow:  0px 0px 20px 3px rgba(70, 70, 70, 0.5);
 }
-a.subtle {
-  color: #333;
+.info-unit i {
+  color: gold;
 }
-a.subtle:hover {
-  color: #555;
-  text-decoration: underline;
-}
-p.copyright {
-  font-size: 13px;
-}
-form {
+.info-unit form {
   margin: 0;
 }
-.header {
-  background: #222 url(../assets/black_linen_v2.png);
-  position: relative;
-  z-index: 0;
-  color: #fff;
-  padding: 20px;
-  padding-bottom: 34px;
+.info-unit input#Field1 {
+  padding: 9px;
+  margin-right: -3px;
+  border: 1px solid #888;
+  width: 190px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
-.header .nav {
-  font-size: 16px;
-  margin-top: -14px;
+.info-unit input#saveForm {
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
-.header .nav a:hover {
-  text-decoration: none;
+.info-unit li {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: lighter;
 }
-.blog .logo, .page .logo {
-  margin: 8px 40px 0 0;
+.description {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 200;
 }
-.screens {
-  z-index: 10;
-  margin-top: -50px;
-  position: relative;
+hr.style-six {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-.center {
-  text-align: center;
+.white-bg {
+  background: #ffffff;
+  margin: 20px 0 0 0;
+  padding: 100px 0;
+  -webkit-box-shadow:  0px -6px 15px 0px rgba(60, 60, 60, 0.2);
+          box-shadow:  0px -6px 15px 0px rgba(60, 60, 60, 0.2);
 }
-.clearfix {
-  clear: both;
-}
-a.border-fix {
-  border: 1px solid #AAA;
-}
-#Field1 {
-  height: 27px;
-}
-#saveForm {
-  margin-left: -5px;
-}
-a.hero-link {
-  text-decoration: underline;
-  color: #2f96b4;
-}
-a.hero-link:hover {
-  color: #24748c;
-}
-body {
-   background-color: #f4f4f4;
+.footer {
+  padding: 40px 0 70px 0;
+  border-top: 2px solid #aaaaaa;
 }
