@@ -3,9 +3,36 @@
  *= require_tree .
  *= require 'font-awesome'
  */
+
 body {
   background: #e9e9e9 url(noise_lines.png) repeat;
   font-family: 'Kreon', serif;
+}
+body .btn-group {
+  margin-top: 5px;
+}
+body #toolbar {
+  margin: 34px 0 -20px 0;
+}
+body #toolbar .btn, body #toolbar .btn-large {
+  -webkit-border-radius: 3px;
+  -webkit-border-bottom-right-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  -moz-border-radius: 3px;
+  -moz-border-radius-bottomright: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  border-radius: 3px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 0 5px;
+}
+a.twitter  {
+  color: #5BC0DE;
+}
+a.twitter:hover {
+  color: #5BC0DE;
 }
 #hero1 {
   transform:rotate();
@@ -16,8 +43,20 @@ body {
 }
 div.dark-bar {
   background: #e9e9e9 url(dark_leather.png) repeat;
-  padding-bottom: 25px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 10;
 }
+/* div.dark-bar .nav ul {
+  list-style-type: none;
+  background-image: url(navi_bg.png);
+  margin: auto;
+}
+div.dark-bar .nav li {
+  float: left;
+}
+*/
 .left-content {
   padding-top: 55px;
 }
@@ -39,7 +78,7 @@ h2.try {
   margin-right: 10px;
 }
 h3.third {
-  font-size: 22px;
+  font-size: 17px;
   line-height: 30px;
 }
 .info-unit {
@@ -92,10 +131,10 @@ h3.third {
   font-weight: 200;
 }
 hr.style-six {
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 .white-bg {
   background: #ffffff;
@@ -105,6 +144,14 @@ hr.style-six {
           box-shadow:  0px -6px 15px 0px rgba(60, 60, 60, 0.2);
 }
 .footer {
+  background: #e9e9e9 url(dark_leather.png) repeat;
   padding: 40px 0 70px 0;
-  border-top: 2px solid #aaaaaa;
+  border-top: 2px solid #000000;
+}
+.footer h2 {
+  color: #444;
+  text-shadow: 1px 1px 1px #000000;
+}
+.page .border-fix {
+  border: 1px solid #999;
 }

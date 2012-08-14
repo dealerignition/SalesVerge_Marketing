@@ -13,9 +13,20 @@
       .container
         .row
           .span12
-            %br
-            %br
-            %img{:src => "/assets/salesverge_logo.png", :height=>"52", :width=>"145", :class=>"logo", :alt=>"SalesVerge Logo"}
+            .logo.pull-left
+              %img{:src => "/assets/salesverge_logo.png", :height=>"52", :width=>"145", :class=>"logo", :alt=>"SalesVerge Logo"}
+            #toolbar.pull-right
+              = link_to "https://twitter.com/salesverge", :target => "_blank", :class => "twitter" do
+                = image_tag('twitter_icon.png', :alt => "Follow @salesverge on Twitter")
+                Follow
+                %strong
+                  @salesverge
+              %a.btn.btn-large.active{:href=>"/"}
+                Home
+              %a.btn.btn-large.btn-success{:href=>"/blog"}
+                Blog
+              %a.btn.btn-large.btn-success{:href=>"http://help.salesverge.com/"}
+                Help
 
     / MAIN HERO CONTENT
     .container
@@ -68,10 +79,17 @@
               SalesVerge is a <strong>business app</strong> for the <a class='hero-link' href='http://www.salesverge.com/ipad'><strong>iPad</strong></a>
               and <a class='hero-link' href='http://www.salesverge.com/iphone'><strong>iPhone</strong></a> made to help you keep track of customers even <em>before</em> 
               they buy from you. SalesVerge manages your customer relationships <em>on and off</em> the showroom floor. Your customers come back to you, not another salesperson.
+            / AddThis Button
+            %br
+            .addthis_toolbox.addthis_default_style
+              %a.addthis_button_facebook_like{ "fb:like:layout" => "button_count"}
+              %a.addthis_button_tweet
+              %script{:type => "text/javascript",
+                      :src  => "http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e25d54826eb110d"}
           
           / HERO GRAPHICS
           .span7
-            %img#hero1.pull-right{:src => "/assets/iphone-sales-tool.png", :style=>"margin-top: -65px;", :alt=>"FIXME"}
+            %img#hero1.pull-right{:src => "/assets/iphone-sales-tool.png", :style=>"margin-top: -100px;", :alt=>"iPhone sales tool", :width => "350"}
 
     / LOWER WHITE-BG CONTENT    
     .white-bg
@@ -82,19 +100,22 @@
             .thumbnails
               .span4
                 .thumbnail
-                  %img{ :src => "http://placehold.it/290x180", :alt=>"FIXME"}
-                  .caption                                   
-                    %h5 Thumbnail label                      
+                  %img{ :src => "/assets/connect-with-customers-1.jpg", :alt=>"Connect with customers"}
+                  .caption   
+                    %h3.third Connect With Your Customers
+                    %p Ask them for their name and email and record it right on your phone.
               .span4                                         
                 .thumbnail                                   
-                  %img{ :src => "http://placehold.it/290x180", :alt=>"FIXME"}
+                  %img{ :src => "/assets/see-your-activities.jpg", :alt=>"Engage with them"}
                   .caption                                   
-                    %h5 Thumbnail label                      
+                    %h3.third Manage Activities With Customers
+                    %p Send them follow-up product quotes about the products they looked at.
               .span4                                         
                 .thumbnail                                   
-                  %img{ :src => "http://placehold.it/290x180", :alt=>"FIXME"}
+                  %img{ :src => "/assets/close-more-sales.jpg", :alt=>"Close more sales"}
                   .caption
-                    %h5 Thumbnail label   
+                    %h3.third Sell More
+                    %p Engage with your customers in order to get them back to your store. Close the sale.
 
     / FOOTER AND OTHER THINGS    
     = render "layouts/footer"

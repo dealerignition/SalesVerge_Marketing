@@ -1,1 +1,9 @@
 
+.marketing .thumbnail {
+  min-height: 305px;
+}
+.marketing .thumbnail .caption {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 200;
+}
