@@ -83,7 +83,7 @@ h3.third {
 }
 .info-unit {
   background: #37b34a url(green-bg.jpg) repeat;
-  padding: 20px;
+  padding: 15px 20px;
   border: 1px solid #1F652A;
   margin-top: 20px;
   color: #ffffff;
@@ -98,6 +98,16 @@ h3.third {
 }
 .info-unit form {
   margin: 0;
+}
+.info-unit p.gold {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 200;
+  color: gold;
+  text-align: center;
+}
+.info-unit p.gold strong {
+  color: #003580;
 }
 .info-unit input#Field1 {
   padding: 9px;
@@ -126,11 +136,12 @@ h3.third {
 }
 .description {
   margin-top: 20px;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 17px;
+  line-height: 22px;
   font-weight: 200;
 }
 hr.style-six {
+  margin: 13px 0;
   border: 0;
   height: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -164,3 +175,4 @@ hr.style-six {
   margin-top: -40px;
   margin-bottom: 60px;
 }
+
