@@ -36,7 +36,7 @@
             %h1.main Mobile Sales App
         .row    
           .span5
-            .info-unit
+            .info-unit.grey-info-unit
               %ul.unstyled
                 %li
                   %i.icon-ok
@@ -50,6 +50,7 @@
                 %li
                   %i.icon-ok
                   All from a mobile device or browser
+            .info-unit.green-info-unit
               .sign-up
                 %form#form103{ :name => "form103", 
                                :autocomplete => "off", 
@@ -58,8 +59,7 @@
                                :action => "https://dealerignition.wufoo.com/forms/z7p8a9/#public" }
                   .input-append
                     %h2.try 
-                      Try it!
-                      %i.icon-chevron-down
+                      Try the app today!
                     .float-left{:style => "float:left"}
                       %input#Field1.span3{ :name => "Field1",       :type => "email", 
                                            :spellcheck => "false",  :value => "", 
@@ -72,15 +72,7 @@
                       (empty)
                     %textarea{ :name => "comment", :id => "comment", :rows => "1", :cols => "1"}
                     %input#idstamp{ :type => "hidden", :name => "idstamp", :value => "677Ekg9h804SzOpIVjRw6YvnPQCR15vgtbrr9fV+2Sw="}
-              %hr.style-six
-              %p.gold 
-                Text <strong>sales</strong> to <strong>864-345-7375</strong> to sign-up for the web app right on your iPhone!
-            .description{:style => "margin-top:20px"}
-              SalesVerge is a <strong>business app</strong> for the <a class='hero-link' href='http://www.salesverge.com/ipad'><strong>iPad</strong></a>
-              and <a class='hero-link' href='http://www.salesverge.com/iphone'><strong>iPhone</strong></a> made to help you keep track of customers even <em>before</em> 
-              they buy from you. SalesVerge manages your customer relationships <em>on and off</em> the showroom floor. Your customers come back to you, not another salesperson.
-              
-            / AddThis Button
+            / AddThis Buttons
             %br
             .addthis_toolbox.addthis_default_style
               %a.addthis_button_facebook_like{ "fb:like:layout" => "button_count"}
@@ -90,11 +82,30 @@
           
           / HERO GRAPHICS
           .span7
-            %img#hero1.pull-right{:src => "/assets/iphone-sales-tool.png", :style=>"margin-top: -100px;", :alt=>"iPhone sales tool", :width => "350"}
+            %img#hero1{:src => "/assets/mobile-and-web-sales-tool.png", :alt=>"iPhone sales tool", :width => "629", :height=>"449"}
 
     / LOWER WHITE-BG CONTENT    
     .white-bg
       .container
+        .row
+          .span12
+            .info-unit.phone-info-unit
+              %p.phone
+                %i.icon-comments-alt
+                Text <strong>sales</strong> to <strong>864-345-7375</strong> to sign-up for the web app right on your iPhone!
+        .row
+          :javascript
+            jQuery(document).ready(function($) {
+              $('a[rel*=facebox]').facebox() 
+            })
+          .span12
+            .video-container
+              #ul.thumbnails
+                #li.span2
+                  %a{:href=>"/product-video.html", :class=>"thumbnail", :id=>"video-thumb", :rel=>"facebox"}
+                    %img{:src=>"/assets/video-thumb.jpg", :alt=>"FIXME"}
+                    %p
+                      Watch this short video
         .row
           .span12
             %h2.secondary Turn 'just looking' customers into buyers!
@@ -117,6 +128,18 @@
                   .caption
                     %h3.third Sell More
                     %p Engage with your customers in order to get them back to your store. Close the sale.
+
+    / LOWER WHITE-BG CONTENT    
+    .grey-bg
+      .container
+        .row
+          .span2.offset2
+            %i.icon-briefcase.big-icon{:style=>"color:#333;"}
+          .span6
+            .description
+              SalesVerge is a <strong>business app</strong> for the <a class='hero-link' href='http://www.salesverge.com/ipad'><strong>iPad</strong></a>
+              and <a class='hero-link' href='http://www.salesverge.com/iphone'><strong>iPhone</strong></a> made to help you keep track of customers even <em>before</em> 
+              they buy from you. SalesVerge manages your customer relationships <em>on and off</em> the showroom floor. Your customers come back to you, not another salesperson.
 
     / FOOTER AND OTHER THINGS    
     = render "layouts/footer"
