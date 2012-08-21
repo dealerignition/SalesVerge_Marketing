@@ -14,7 +14,7 @@
         .row
           .span12
             .logo.pull-left
-              %img{:src => "/assets/salesverge_logo.png", :height=>"52", :width=>"145", :class=>"logo", :alt=>"SalesVerge Logo"}
+              = image_tag("/assets/salesverge_logo.png", :class=>"logo", :alt=>"SalesVerge Logo", :width => "145", :height => "52")
             #toolbar.pull-right
               = link_to "https://twitter.com/salesverge", :target => "_blank", :class => "twitter" do
                 = image_tag('twitter_icon.png', :alt => "Follow @salesverge on Twitter")
@@ -82,7 +82,7 @@
           
           / HERO GRAPHICS
           .span7
-            %img#hero1{:src => "/assets/mobile-and-web-sales-tool.png", :alt=>"iPhone sales tool", :width => "629", :height=>"449"}
+            %img#hero1{:src => "/assets/mobile-and-web-sales-tool.png", :alt => "iPhone sales tool", :width => "629", :height => "449"}
 
     / LOWER WHITE-BG CONTENT    
     .white-bg

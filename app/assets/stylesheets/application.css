@@ -13,6 +13,8 @@ body .btn-group {
 }
 body #toolbar {
   margin: 34px 0 -20px 0;
+  width: 600px;
+  text-align: right;
 }
 body #toolbar .btn, body #toolbar .btn-large {
   -webkit-border-radius: 3px;
@@ -49,7 +51,6 @@ h1.main {
   line-height: 70px;
   letter-spacing: -2px;
   text-shadow: -2px 2px 1px #ffffff;
-  filter: dropshadow(color=#ffffff, offx=-2, offy=2);
 }
 h2.secondary {
   font-size: 50px;
