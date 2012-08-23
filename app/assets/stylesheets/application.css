@@ -46,7 +46,7 @@ div.dark-bar {
 .left-content {
   padding-top: 55px;
 }
-h1.main {
+.container .row h1.main {
   font-size: 65px;
   line-height: 70px;
   letter-spacing: -2px;
@@ -194,7 +194,7 @@ hr.style-six {
   color: #444;
   text-shadow: 1px 1px 1px #000000;
 }
-.page .border-fix {
+a.border-fix {
   border: 1px solid #999;
 }
 .big-icon {

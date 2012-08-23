@@ -25,10 +25,8 @@
             Blog
           %a.btn.btn-large.btn-success{:href=>"http://help.salesverge.com/"}
             Help
-
-    .container
       
-      = yield
+    = yield
   
     = render "layouts/footer"
     - unless Rails.env.development?
