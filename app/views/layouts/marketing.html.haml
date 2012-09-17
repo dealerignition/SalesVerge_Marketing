@@ -84,7 +84,22 @@
           
           / HERO GRAPHICS
           .span7
-            %img#hero1{:src => "/assets/mobile-and-web-sales-tool.png", :alt => "iPhone sales tool", :width => "629", :height => "449"}
+            #heroCarousel.carousel.slide
+              .carousel-inner
+                .item.active
+                  %img#hero1{:src => "/assets/mobile-and-web-sales-tool.png", :alt => "iPhone sales tool", :width => "629", :height => "449"}
+                .item
+                  %img#hero2{:src => "/assets/mobile-and-web-sales-tool-2.png", :alt => "iPhone sales tool on the floor", :width => "629", :height => "449"}
+                .item
+                  %img#hero3{:src => "/assets/mobile-and-web-sales-tool-3.png", :alt => "iPad sales tool", :width => "629", :height => "449"}
+              %a.carousel-control.left{:href=>"#heroCarousel", "data-slide"=>"prev"}
+                &lsaquo;
+              %a.carousel-control.right{:href=>"#heroCarousel", "data-slide"=>"next"}
+                &rsaquo;
+            :javascript
+              $('.carousel').carousel({
+                interval: 8000
+              })
 
     / LOWER WHITE-BG CONTENT    
     .white-bg
