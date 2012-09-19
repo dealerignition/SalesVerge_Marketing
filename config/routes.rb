@@ -1,6 +1,7 @@
 SalesVergeMarketing2::Application.routes.draw do
 
   resources :about
+  resources :videos
   resources :thankyou
   match '/ipad' => 'page#ipad'
   match '/iphone' => 'page#iphone'

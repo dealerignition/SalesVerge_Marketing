@@ -1,22 +1,33 @@
-- @title = "About Us"
-- @meta_description = "The makers of SalesVerge have been building and maintaining business and marketing tools since 2009."
+- @title = "Videos"
+- @meta_description = "Learn more about SalesVerge. Check out our video library."
 
 .container
   .row
     .span4
       .page-header
-        %h1.main About Us
+        %h1.main Videos
+        %h3 Check out our selection of videos
   .row
-    .span6
-      .info-unit.grey-info-unit 
-        %p.text
-          The makers of SalesVerge have been building and maintaining business and marketing tools since 2009. 
-          We've built a product catalog iPad app as well as marketing automation software for brands and independent dealers.
-        %br
-        %p.text
-          Our goal is to build successful and useful services and applications that ultimately help retailers sell more.
-
-      %br
+    .span12
+      #ul.thumbnails
+        #li.span3
+          %a{:href=>"/product-video.html", :class=>"thumbnail", :id=>"video-thumb", :rel=>"facebox"}
+            %img{:src=>"/assets/video-thumb.jpg", :alt=>"FIXME", :width => "290"}
+            %p
+              Watch this short video
+        #li.span3
+          %a{:href=>"/product-video.html", :class=>"thumbnail", :id=>"video-thumb", :rel=>"facebox"}
+            %img{:src=>"/assets/video-thumb.jpg", :alt=>"FIXME", :width => "290"}
+            %p
+              Watch this short video
+        #li.span3
+          %a{:href=>"/product-video.html", :class=>"thumbnail", :id=>"video-thumb", :rel=>"facebox"}
+            %img{:src=>"/assets/video-thumb.jpg", :alt=>"FIXME", :width => "290"}
+            %p
+              Watch this short video
+  .row
+    .span12
+      %hr
       %h3 Ready to try the app?
       .sign_up_form
         %form#form103{ :name => "form103", :autocomplete => "off", :enctype => "multipart/form-data", :method => "post", :action => "https://dealerignition.wufoo.com/forms/z7p8a9/#public"}
@@ -28,8 +39,7 @@
               (empty)
             %textarea{ :name => "comment", :id => "comment", :rows => "1", :cols => "1"}
             %input#idstamp{ :type => "hidden", :name => "idstamp", :value => "677Ekg9h804SzOpIVjRw6YvnPQCR15vgtbrr9fV+2Sw="}  
-    .span6
-      = image_tag "mobile_marketing_crm_sales_tool.png", :alt => "mobile marketing crm sales tool."
+
 .white-bg
   .container
     .row
@@ -40,6 +50,10 @@
           SalesVerge is a <strong>business app</strong> for the <a class='hero-link' href='http://www.salesverge.com/ipad'><strong>iPad</strong></a>
           and <a class='hero-link' href='http://www.salesverge.com/iphone'><strong>iPhone</strong></a> made to help you keep track of customers even <em>before</em> 
           they buy from you. SalesVerge manages your customer relationships <em>on and off</em> the showroom floor. Your customers come back to you, not another salesperson.
+
+:javascript
+  jQuery(document).ready(function($) {
+    $('a[rel*=facebox]').facebox() 
+  })
       
           
-      
