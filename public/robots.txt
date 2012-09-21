@@ -1,6 +1,6 @@
 
 User-agent: *
-Disallow: /a
+Disallow: /a.html
 Disallow: /video-collaboration.html
 Disallow: /video-getting-started.html
 Disallow: /video-product-video.html
