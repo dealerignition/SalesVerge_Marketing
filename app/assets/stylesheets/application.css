@@ -13,7 +13,7 @@ body .btn-group {
 }
 body #toolbar {
   margin: 34px 0 -20px 0;
-  width: 600px;
+  width: 670px;
   text-align: right;
 }
 body #toolbar .btn, body #toolbar .btn-large {
@@ -26,8 +26,8 @@ body #toolbar .btn, body #toolbar .btn-large {
   border-radius: 3px;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
   margin: 0 5px;
 }
 a.twitter  {

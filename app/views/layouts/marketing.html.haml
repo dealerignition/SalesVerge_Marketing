@@ -27,6 +27,8 @@
                 Blog
               %a.btn.btn-large.btn-success{:href=>"http://help.salesverge.com/"}
                 Help
+              %a.btn.btn-large.btn-primary{:href=>"http://app.salesverge.com/"}
+                Login
 
     / MAIN HERO CONTENT
     .container
@@ -167,4 +169,5 @@
     - unless Rails.env.development?
       = render "shared/clicky"
     = render "shared/net_results"
-    = render "shared/olark"
+    - unless Rails.env.development?
+      = render "shared/olark"
